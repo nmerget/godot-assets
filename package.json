@@ -1,0 +1,52 @@
+{
+  "name": "right",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "tsc && vite build",
+    "dev": "vite --open",
+    "generate:manifest-icons": "pwa-asset-generator public/app-icon.png public/icons --favicon -i ./index.html",
+    "generate:readme": "npx marked -o readme.html -i README.md",
+    "lint": "eslint src --ext ts,tsx",
+    "prepare": "husky",
+    "preview": "vite preview",
+    "start": "vite",
+    "test": "playwright test -c playwright.config.ts",
+    "tsc": "tsc"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@eslint/compat": "^1.2.9",
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.28.0",
+    "@playwright/test": "1.52.0",
+    "@types/node": "^22.15.29",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.5",
+    "@typescript-eslint/eslint-plugin": "^8.33.1",
+    "@typescript-eslint/parser": "^8.33.1",
+    "@vitejs/plugin-react": "^4.5.1",
+    "commander": "^14.0.0",
+    "eslint": "^9.28.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.2.0",
+    "husky": "9.1.7",
+    "prettier": "^3.5.3",
+    "prettier-plugin-pkg": "0.19.1",
+    "prettier-plugin-sh": "^0.17.4",
+    "pwa-asset-generator": "^8.0.5",
+    "replace-in-file": "^8.3.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.33.1",
+    "vite": "^6.3.5",
+    "vite-plugin-pwa": "^1.0.0",
+    "workbox-build": "^7.3.0",
+    "workbox-window": "^7.3.0"
+  },
+  "packageManager": "pnpm@10.11.0+sha1.4048eeefd564ff1ab248fac3e2854d38245fe2f1"
+}

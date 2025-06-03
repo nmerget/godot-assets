@@ -1,0 +1,29 @@
+---
+version: 2
+updates:
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'daily'
+    pull-request-branch-name:
+      separator: '-'
+
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'daily'
+    pull-request-branch-name:
+      separator: "-"
+    # https://github.com/dependabot/dependabot-core/issues/5226#issuecomment-1179434437
+    versioning-strategy: increase
+    groups:
+      patch-dependencies:
+        update-types:
+          - "patch"
+      playwright:
+        patterns:
+          - "@playwright*"
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
